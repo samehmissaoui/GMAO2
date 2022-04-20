@@ -1,0 +1,21 @@
+<div class="container">
+
+    <form  class="form-group form-horizontal" #operateurForm="ngForm" (ngSubmit)="ajout()">
+        <fieldset class=gauche>
+        
+       <div class="col-sm-12 col-md-12 col-lg-12">
+        <label> Nom Operateur </label>
+        <input class="form-control" type="text" name="nom_operateur" #nom_operateur="ngModel" [(ngModel)]="operateur.nom_operateur" >
+       </div>
+       <div class="col-sm-12 col-md-12 col-lg-12">
+        <label> Id Agnet </label>
+        <input class="form-control" type="text" name="id_agnet" #id_agnet="ngModel" [(ngModel)]="operateur.id_agnet" >
+       </div>
+      </fieldset>
+        <div style="-ms-flex-align: center;">
+          <button   type="submit"  class="btn btn-success" (click)="redirect()" >cancel</button>
+          <button  type="submit"  class="btn btn-success" >ajouter</button>
+        </div>
+    </form>
+    </div>
+    

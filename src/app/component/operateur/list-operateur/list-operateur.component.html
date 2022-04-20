@@ -1,0 +1,33 @@
+<div class="row">
+<div class="col-md-12" >
+    <div class="card ">
+      <div class="card-header">
+        <h4 class="card-title"> Operetaurs</h4>
+        <a class="btn btn-success" routerLink="/component/operateur/add">Ajouter</a>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <th>Id Operateur</th>
+              <th> Nom</th>
+              <th> Id Agent</th>
+            </thead>
+            <tbody>
+              <tbody  *ngFor="let op of operateur"> 
+                <tr>
+                  <td>{{op.id}}</td>
+                  <td>{{op.nom_operateur}}</td>
+                  <td>{{op.id_agnet}}</td>     
+                    <td><a class="btn btn-success" [routerLink]="['/component/operateur/update',op.id]">Modifier</a></td>    
+                  <td><a class="btn btn-success" >Supprimer</a></td>
+               </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  

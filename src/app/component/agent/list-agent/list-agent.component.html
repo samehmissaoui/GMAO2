@@ -1,0 +1,39 @@
+<div class="row"> 
+    <div class="col-md-12" >
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title"> Agents</h4>
+            <a class="btn btn-success" routerLink="/component/agent/add">Ajouter</a>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table" >
+                <thead class=" text-primary">
+                  <th>id agent</th>
+                  <th> nom</th>
+                  <th> matricule</th>
+                  <th class="text-right">Adresse</th>
+                  <th> tel</th>
+                  <th> email</th>
+                  <th> password</th>
+                </thead>
+                <tbody>
+                  <tbody  *ngFor="let agent of agent"> 
+                    <tr>
+                      <td>{{agent.id_agent}}</td>
+                      <td>{{agent.nom}}</td>
+                      <td>{{agent.matricule}}</td>        
+                      <td>{{agent.adresse}}</td>
+                      <td>{{agent.tel}}</td>
+                      <td>{{agent.email}}</td>
+                      <td>{{agent.password}}</td>
+                      <td><a class="btn btn-success" [routerLink]="['/component/agent/update',agent.id_agent]">Modifier</a></td>    
+                      <td><a class="btn btn-success" (click)="deleteAgent(agent.id_agent)" >Supprimer</a></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>

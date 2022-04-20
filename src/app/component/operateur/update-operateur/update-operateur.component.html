@@ -1,0 +1,23 @@
+<div class="container">
+
+    <form  class="form-group form-horizontal" #operateurForm="ngForm" (ngSubmit)="update()" >
+        <fieldset class=gauche>
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <label> Id Operateur: </label>
+        <input class="form-control" type="number" name="id" #id="ngModel"  [(ngModel)]="operateur[0].id" >
+       </div>
+       <div class="col-sm-12 col-md-12 col-lg-12">
+        <label> Nom Operateur </label>
+        <input class="form-control" type="text" name="nom_operateur" #nom_operateur="ngModel" [(ngModel)]="operateur[0].nom_operateur" >
+       </div>
+       <div class="col-sm-12 col-md-12 col-lg-12">
+        <label> Id Agnet </label>
+        <input class="form-control" type="number" name="id_agnet" #id_agnet="ngModel" [(ngModel)]="operateur[0].id_agnet" >
+       </div>
+      </fieldset>
+        <div style="-ms-flex-align: center;">
+          <button   type="submit"  class="btn btn-success" (click)="redirect()" >Cancel</button>
+          <button  type="submit"  class="btn btn-success" >Modifier</button>
+        </div>
+    </form>
+    </div>
