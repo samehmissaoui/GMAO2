@@ -1,1 +1,39 @@
-<p>list-technicien works!</p>
+<div class="row">
+<div class="col-md-12">
+    <div class="card ">
+      <div class="card-header">
+        <h4 class="card-title"> Techniciens</h4>
+        <a class="btn btn-success" routerLink="/component/technicien/add">Ajouter</a>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <th>id agent</th>
+              <th> nom</th>
+              <th> matricule</th>
+              <th class="text-right">Adresse</th>
+              <th> tel</th>
+              <th> email</th>
+              <th> password</th>
+            </thead>
+            <tbody>
+              <tbody  *ngFor="let tech of technicien"> 
+                <tr>
+                  <td>{{tech.id_technicien}}</td>
+                  <td>{{tech.nom}}</td>
+                  <td>{{tech.matricule}}</td>        
+                  <td>{{tech.adresse}}</td>
+                  <td>{{tech.tel}}</td>
+                  <td>{{tech.email}}</td>
+                  <td><a class="btn btn-info"[routerLink]="['/component/technicien/update',tech.id_technicien]">Modifier</a></td>    
+                  <td><a class="btn btn-danger" (click)="deleteTech(tech.id_technicien)">Supprimer</a></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

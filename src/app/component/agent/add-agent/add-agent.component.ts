@@ -23,5 +23,5 @@ export class AddAgentComponent implements OnInit {
      redirect(){
        this.router.navigate(['component/agent/list']);
    }
-
+ 
 }

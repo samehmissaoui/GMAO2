@@ -19,9 +19,8 @@ const routes: Routes = [
 				path:'list' ,component:ListOperateurComponent }
       ,	
       {
-			
 				path:'update/:id' ,component:UpdateOperateurComponent }
-      ,
+  
 ];
 
 @NgModule({

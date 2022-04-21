@@ -18,10 +18,10 @@ export class AddTechnicienComponent implements OnInit {
 
   ajout(){
     this._service.AddTechnicien(this.technicien).subscribe()
-    this.router.navigate(['/#/table']);
+    this.redirect()
      }
    
      redirect(){
-       this.router.navigate(['/#/table']);
+       this.router.navigate(['component/technicien/list']);
    }
 }

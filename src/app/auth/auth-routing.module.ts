@@ -7,7 +7,7 @@ import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
-  { path: '',
+  { path: '' ,
   children: [
 
     {
@@ -26,8 +26,7 @@ const routes: Routes = [
       path: 'forgotpassword',
       component: ForgotPasswordComponent
     }
-  ]
-  }
+  ]}
  
 ];
 

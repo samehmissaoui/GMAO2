@@ -23,4 +23,9 @@ export class ListOperateurComponent implements OnInit {
             })
     }
 
+    deleteAgent(id:number){
+      this._service.deleteOperateur(id).subscribe((res)=>{
+        this.getOperateur()
+      })}
+
 }

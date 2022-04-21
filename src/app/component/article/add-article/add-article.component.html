@@ -1,0 +1,28 @@
+<div class="container">
+
+    <form  class="form-group form-horizontal" #articleForm="ngForm" (ngSubmit)="ajout()">
+        <fieldset class=gauche>
+        
+       <div class="col-sm-12 col-md-12 col-lg-12">
+        <label> Nom Article </label>
+        <input class="form-control" type="text" name="nom_article" #nom_article="ngModel" [(ngModel)]="article.nom_article" >
+       </div>
+       <div class="col-sm-12 col-md-12 col-lg-12">
+        <label> Prix </label>
+        <input class="form-control" type="number" name="prix" #prix="ngModel" [(ngModel)]="article.prix" >
+       </div>
+       <div class="col-sm-12 col-md-12 col-lg-12">
+        <label> Description </label>
+        <input class="form-control" type="text" name="description" #description="ngModel" [(ngModel)]="article.description" >
+       </div>
+      </fieldset>
+      
+        <div style="-ms-flex-align: center;">
+          <button   type="submit"  class="btn btn-success" (click)="redirect()" >cancel</button>
+          <button  type="submit"  class="btn btn-success" >ajouter</button>
+        </div>
+    </form>
+
+ </div>
+    
+  

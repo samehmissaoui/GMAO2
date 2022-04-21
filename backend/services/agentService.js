@@ -42,7 +42,7 @@ const updateAgent = (agent) => {
     });
   };
 const deleteAgent = (gId) => {
-  let qr = `delete from agent WHERE id_agent='${gId}'`;
+  let qr = `delete from agent WHERE id_agent=${gId}`;
   return new Promise((resolve, reject) => {
     db.query(qr, (err, result) => {
       err ? reject(err) : resolve(result);

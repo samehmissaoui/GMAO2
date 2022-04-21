@@ -35,3 +35,5 @@ export class AgentService {
     return this._http.delete<Agent>(`${this.baseURL}/agent/${id}`)
   }
 }
+
+

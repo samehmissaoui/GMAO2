@@ -1,1 +1,37 @@
-<p>add-technicien works!</p>
+<div class="container">
+
+    <form  class="form-group form-horizontal" #technicienForm="ngForm" (ngSubmit)="ajout()">
+        <fieldset class=gauche>
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <label> nom: </label>
+        <input class="form-control" type="text" name="nom" #nom="ngModel"  [(ngModel)]="technicien.nom" >
+       </div>
+       <div class="col-sm-12 col-md-12 col-lg-12">
+        <label> Matricule </label>
+        <input class="form-control" type="number" name="matricule" #matricule="ngModel" [(ngModel)]="technicien.matricule" >
+       </div>
+       <div class="col-sm-12 col-md-12 col-lg-12">
+        <label> adresse </label>
+        <input class="form-control" type="text" name="adresse" #adresse="ngModel" [(ngModel)]="technicien.adresse" >
+       </div>
+      </fieldset>
+      <fieldset class=droite>
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label> tel </label>
+        <input class="form-control" type="number" name="tel" #tel="ngModel" [(ngModel)]="technicien.tel" >
+       </div>
+       <div class="col-sm-12 col-md-12 col-lg-12">
+        <label> email </label>
+        <input class="form-control"  type="string" name="email" #email="ngModel" [(ngModel)]="technicien.email" >
+       </div>
+       <div class="col-sm-12 col-md-12 col-lg-12">
+        <label> password: </label>
+        <input  class="form-control" type="string" name="password" #password="ngModel" [(ngModel)]="technicien.password" >
+         </div>        
+        </fieldset>
+        <div style="-ms-flex-align: center;">
+          <button   type="submit"  class="btn btn-success" (click)="redirect()" >cancel</button>
+          <button  type="submit"  class="btn btn-success" >ajouter</button>
+        </div>
+    </form>
+    </div>

@@ -19,61 +19,46 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/component/badges',
-    title: 'Badges',
+    path: '/component/operateur/list',
+    title: 'Operateur',
     icon: 'bi bi-patch-check',
     class: '',
     extralink: false,
     submenu: []
   },
   {
-    path: '/component/buttons',
-    title: 'Button',
+    path: '/component/agent/list',
+    title: 'Agent',
     icon: 'bi bi-hdd-stack',
     class: '',
     extralink: false,
     submenu: []
   },
   {
-    path: '/component/card',
-    title: 'Card',
+    path: '/component/technicien/list',
+    title: 'Technicien',
     icon: 'bi bi-card-text',
     class: '',
     extralink: false,
     submenu: []
   },
   {
-    path: '/component/dropdown',
-    title: 'Dropdown',
+    path: '/component/intervention/list',
+    title: 'Intervention',
     icon: 'bi bi-menu-app',
     class: '',
     extralink: false,
     submenu: []
   },
   {
-    path: '/component/pagination',
-    title: 'Pagination',
+    path: '/component/article/list',
+    title: 'Article',
     icon: 'bi bi-dice-1',
     class: '',
     extralink: false,
     submenu: []
   },
-  {
-    path: '/component/nav',
-    title: 'Nav',
-    icon: 'bi bi-pause-btn',
-    class: '',
-    extralink: false,
-    submenu: []
-  },
-  {
-    path: '/component/table',
-    title: 'Table',
-    icon: 'bi bi-layout-split',
-    class: '',
-    extralink: false,
-    submenu: []
-  },
+ 
   {
     path: '/about',
     title: 'About',

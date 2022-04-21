@@ -27,8 +27,8 @@
                       <td>{{agent.tel}}</td>
                       <td>{{agent.email}}</td>
                       <td>{{agent.password}}</td>
-                      <td><a class="btn btn-success" [routerLink]="['/component/agent/update',agent.id_agent]">Modifier</a></td>    
-                      <td><a class="btn btn-success" (click)="deleteAgent(agent.id_agent)" >Supprimer</a></td>
+                      <td><a class="btn btn-info" [routerLink]="['/component/agent/update',agent.id_agent]">Modifier</a></td>    
+                      <td><a class="btn btn-danger" (click)="deleteAgent(agent.id_agent)" >Supprimer</a></td>
                     </tr>
                 </tbody>
               </table>

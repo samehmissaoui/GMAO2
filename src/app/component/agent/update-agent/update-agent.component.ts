@@ -27,6 +27,7 @@ export class UpdateAgentComponent implements OnInit {
     return this._service.getAgent(this.id).subscribe((res)=>{  
       this.agent= res
     })
+    
     }
     update(){
     this._service.updateAgent(this.agent[0]).subscribe((res)=>{

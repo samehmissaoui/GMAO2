@@ -12,36 +12,36 @@ export const TopSelling: Product[] = [
 
     {
         image: 'assets/images/users/user1.jpg',
-        uname: 'Hanna Gover',
+        uname: 'mohamed',
         gmail: 'hgover@gmail.com',
-        productName: 'Flexy React',
+        productName: 'ooredoo',
         status: 'danger',
         weeks: 35,
         budget: '95K'
     },
     {
         image: 'assets/images/users/user2.jpg',
-        uname: 'Hanna Gover',
+        uname: 'jamil ',
         gmail: 'hgover@gmail.com',
-        productName: 'Landing pro React',
+        productName: 'orange',
         status: 'info',
         weeks: 35,
         budget: '95K'
     },
     {
         image: 'assets/images/users/user3.jpg',
-        uname: 'Hanna Gover',
+        uname: 'nasser',
         gmail: 'hgover@gmail.com',
-        productName: 'Elite React	',
+        productName: 'orange	',
         status: 'warning',
         weeks: 35,
         budget: '95K'
     },
     {
         image: 'assets/images/users/user4.jpg',
-        uname: 'Hanna Gover',
+        uname: 'maha',
         gmail: 'hgover@gmail.com',
-        productName: 'Ample React',
+        productName: 'orange',
         status: 'success',
         weeks: 35,
         budget: '95K'

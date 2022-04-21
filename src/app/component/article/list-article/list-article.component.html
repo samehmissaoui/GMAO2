@@ -1,0 +1,33 @@
+<div class="row"> 
+    <div class="col-md-12" >
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title"> Article</h4>
+            <a class="btn btn-success" routerLink="/component/article/add">Ajouter</a>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table" >
+                <thead class=" text-primary">
+                  <th>id article</th>
+                  <th> nom</th>
+                  <th> prix</th>
+                 <th> description<th>
+                </thead>
+                <tbody>
+                  <tbody  *ngFor="let article of article"> 
+                    <tr>
+                      <td>{{article.id_article}}</td>
+                      <td>{{article.nom_article}}</td>
+                      <td>{{article.prix}}</td>     
+                      <td>{{article.description}}</td>      
+                      <td><a class="btn btn-info"[routerLink]="['/component/article/update',article.id_article]">Modifier</a></td>    
+                      <td><a class="btn btn-danger" (click)="deleteArticle(article.id_article)" >Supprimer</a></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>

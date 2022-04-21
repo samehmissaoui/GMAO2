@@ -6,6 +6,7 @@ import { TechnicienComponent } from './technicien.component';
 import { AddTechnicienComponent } from './add-technicien/add-technicien.component';
 import { UpdateTechnicienComponent } from './update-technicien/update-technicien.component';
 import { ListTechnicienComponent } from './list-technicien/list-technicien.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ListTechnicienComponent } from './list-technicien/list-technicien.compo
   ],
   imports: [
     CommonModule,
-    TechnicienRoutingModule
+    TechnicienRoutingModule,
+    FormsModule
   ]
 })
 export class TechnicienModule { }
