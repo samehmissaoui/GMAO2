@@ -12,7 +12,7 @@ export const TopSelling: Product[] = [
 
     {
         image: 'assets/images/users/user1.jpg',
-        uname: 'mohamed',
+        uname: 'maha',
         gmail: 'hgover@gmail.com',
         productName: 'ooredoo',
         status: 'danger',
@@ -30,7 +30,7 @@ export const TopSelling: Product[] = [
     },
     {
         image: 'assets/images/users/user3.jpg',
-        uname: 'nasser',
+        uname: 'ines',
         gmail: 'hgover@gmail.com',
         productName: 'orange	',
         status: 'warning',
@@ -39,7 +39,7 @@ export const TopSelling: Product[] = [
     },
     {
         image: 'assets/images/users/user4.jpg',
-        uname: 'maha',
+        uname: 'nasser',
         gmail: 'hgover@gmail.com',
         productName: 'orange',
         status: 'success',

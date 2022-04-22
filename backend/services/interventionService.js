@@ -42,7 +42,29 @@ const addIntervention=(intervention)=>{
     
 }
 
-const getClosedIntervention=()=>{
+const updateIntervention=(intervention)=>{
+
+    let qr=`UPDATE intervention SET id_agent=${intervention.id_agent},
+    id_technicien=${intervention.id_technicien},id_photo=${intervention.id_photo},
+    operation='${intervention.operation}',type='${intervention.type}',
+    categorie='${intervention.categorie}',status='${intervention.status}',
+    etat='${intervention.etat}',date='${intervention.date}',
+    departement='${intervention.departement}' ,
+    NRO='${intervention.NRO}',jeton=${intervention.jeton},id_article=${intervention.id_article}
+    where num_intervention=${intervention.num_intervention}`
+    return new Promise((resolve,reject)=>{
+        db.query(qr,(err,result)=>{
+    (err)?
+        reject(err):
+    
+        resolve(result);
+         
+    })
+    })
+}
+
+const getokIntervention=(etat)=>{
+    
     let qr=`select * from intervention where etat = 1`
 
     return new Promise((resolve,reject)=>{
@@ -55,5 +77,21 @@ const getClosedIntervention=()=>{
     })
     })
 }
+const getNokIntervention=(etat)=>{
+    
+    let qr=`select * from intervention where etat = 0`
 
-module.exports={addIntervention,getIntervention ,getClosedIntervention,getInterventionByID}
+    return new Promise((resolve,reject)=>{
+        db.query(qr,(err,result)=>{
+    (err)?
+        reject(err):
+    
+        resolve(result);
+         
+    })
+    })
+}
+
+
+
+module.exports={addIntervention,getIntervention ,getokIntervention,getInterventionByID ,updateIntervention ,getNokIntervention}

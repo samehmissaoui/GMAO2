@@ -33,7 +33,7 @@ export class UpdateInterventionComponent implements OnInit {
   update(){
   this._service.updateIntervention(this.intervention[0]).subscribe((res)=>{
     
-    
+    console.log(this.intervention);
     this.redirect()
   })}
 

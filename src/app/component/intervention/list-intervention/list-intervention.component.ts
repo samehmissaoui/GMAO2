@@ -28,6 +28,10 @@ this._service.deleteIntervention(id).subscribe((res)=>{
 redirect(){
   this.router.navigate(['component/intervention/list']);
 }
-
+etat(){
+  this._service.getNOkIntervention().subscribe((res)=>{
+    this.intervention=res
+  })
+}
 
 }

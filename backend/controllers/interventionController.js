@@ -1,12 +1,12 @@
 const {addIntervention,getIntervention,getInterventionByID,
-  getClosedIntervention}=require ("../services/interventionService")
+  getokIntervention,updateIntervention ,getNokIntervention}=require ("../services/interventionService")
 
 get_intervention = async (req, res )=>{
     res.send (await getIntervention())
 }
 get_intervention_byid = async (req, res )=>{
   let num =req.params.id
-  res.send (await getInterventionByID())
+  res.send (await getInterventionByID(num))
 }
 
 add_intervention = async (req ,res)=>{
@@ -14,8 +14,18 @@ add_intervention = async (req ,res)=>{
   res.send (await addIntervention(intervention))
 
 }
-get_closed_intervention =async (req ,res)=>{
-  res.send (await getClosedIntervention())
+update_intervention = async (req ,res)=>{
+  let intervention =req.body
+  res.send (await updateIntervention(intervention))
+
+}
+get_ok_intervention =async (req ,res)=>{
+  console.log('jjjj')
+  res.send (await getokIntervention())
+}
+get_Nok_intervention =async (req ,res)=>{
+  
+  res.send (await getokIntervention())
 }
 
-module.exports ={get_intervention,add_intervention,get_closed_intervention,get_intervention_byid}
+module.exports ={get_intervention,add_intervention,get_ok_intervention,get_intervention_byid ,update_intervention,get_Nok_intervention}

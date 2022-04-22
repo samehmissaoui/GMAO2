@@ -35,6 +35,11 @@ export class InterventionService {
   deleteIntervention(id:number): Observable<Intervention>{
     return this._http.delete<Intervention>(`${this.baseURL}/intervention/${id}`)
   }
+  getOkIntervention():Observable<Intervention[]>{
+    return this._http.get<Intervention[]>(`${this.baseURL}/intervention/ok`)
 }
-
+getNOkIntervention():Observable<Intervention[]>{
+  return this._http.get<Intervention[]>(`${this.baseURL}/intervention/Nok`)
+}
+}
 
