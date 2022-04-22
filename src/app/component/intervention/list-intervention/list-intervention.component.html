@@ -1,1 +1,44 @@
-<p>list-intervention works!</p>
+
+<div class="row"> 
+    <div class="col-md-12" >
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title"> Intervention</h4>
+            <a class="btn btn-success" routerLink="/component/intervention/add">Ajouter</a>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table" >
+                <thead class=" text-primary">
+                  <th>Numero Intervention</th>
+                  <th> jeton</th>
+                  <!-- <th> Operation</th> -->
+                  <th> status</th>
+                  <th>categorie</th>
+                  <th>Date </th>
+                  <th> type</th>
+                  <th> departement</th>
+                  <th> NRO</th>
+                </thead>
+                <tbody>
+                  <tbody  *ngFor="let inter of intervention"> 
+                    <tr>
+                      <td>{{inter.num_intervention}}</td>
+                      <td>{{inter.jeton}}</td>       
+                      <td>{{inter.status}}</td>
+                      <td>{{inter.categorie}}</td>
+                      <td>{{inter.date}}</td>
+                      <td>{{inter.type}}</td>
+                      <td>{{inter.departement}}</td>
+                      <td>{{inter.NRO}}</td>
+                      <td><a class="btn btn-info" [routerLink]="['/component/intervention/update',inter.num_intervention]">Modifier</a></td>    
+                      <td><a class="btn btn-danger" (click)="deleteIntervention(inter.num_intervention)" >Supprimer</a></td>
+                    </tr>
+                </tbody>
+    
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>

@@ -25,7 +25,9 @@ export class Intervention {
         NRO:number,
         id_article:number,
         id_agent:number,
-        id_photo:string){
+        id_photo:string,
+        num_intervention:number
+        ){
       this.date=date;
       this.jeton=jeton;
       this.operation= operation;
@@ -39,6 +41,7 @@ export class Intervention {
     this.id_article=id_article;
     this.id_agent=id_agent;
     this.id_photo=id_photo;
+    this.num_intervention=num_intervention
       
     }
     

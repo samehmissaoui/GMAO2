@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Agent } from '../agent';
 import { AgentService } from '../agent.service';
-
+  
 @Component({
   selector: 'app-update-agent',
   templateUrl: './update-agent.component.html',

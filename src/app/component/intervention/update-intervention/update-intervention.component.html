@@ -1,1 +1,70 @@
-<p>update-intervention works!</p>
+<div class="container">
+
+    <form  class="form-group form-horizontal" #interventionForm="ngForm" (ngSubmit)="update()">
+        <fieldset class=gauche>
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <label> Numero d'intervention </label>
+        <input class="form-control" type="number" name="num_intervention" #num_intervention="ngModel"  [(ngModel)]="intervention[0].num_intervention" >
+       </div>
+       <div class="col-sm-12 col-md-12 col-lg-12">
+        <label> Jeton </label>
+        <input class="form-control" type="number" name="jeton" #jeton="ngModel" [(ngModel)]="intervention[0].jeton" >
+       </div>
+       <div class="col-sm-12 col-md-12 col-lg-12">
+        <label> Operation </label>
+        <input class="form-control" type="text" name="operation" #operation="ngModel" [(ngModel)]="intervention[0].operation" >
+       </div>
+       <div class="col-sm-12 col-md-12 col-lg-12">
+        <label>Type</label>
+    <input class="form-control" type="text" name="type" #type="ngModel"  [(ngModel)]="intervention[0].type" >
+   </div>
+   <div class="col-sm-12 col-md-12 col-lg-12">
+    <label> Categorie </label>
+    <input class="form-control" type="text" name="categorie" #categorie="ngModel" [(ngModel)]="intervention[0].categorie" >
+   </div>
+   <div class="col-sm-12 col-md-12 col-lg-12">
+    <label> status </label>
+    <input class="form-control" type="text" name="status" #status="ngModel" [(ngModel)]="intervention[0].status" >
+   </div>
+      </fieldset>
+      <fieldset class=droite>
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label> Etat </label>
+        <input class="form-control" type="boolean" name="etat" #etat="ngModel" [(ngModel)]="intervention[0].etat" >
+       </div>
+       <div class="col-sm-12 col-md-12 col-lg-12">
+        <label> NRO </label>
+        <input class="form-control"  type="text" name="NRO" #NRO="ngModel" [(ngModel)]="intervention[0].NRO" >
+       </div>
+       <div class="col-sm-12 col-md-12 col-lg-12">
+        <label> departement: </label>
+        <input  class="form-control" type="text" name="departement" #departement="ngModel" [(ngModel)]="intervention[0].departement" >
+         </div>  
+         <div class="col-sm-12 col-md-12 col-lg-12">
+            <label> Id Agent: </label>
+            <input  class="form-control" type="number" name="id_agent" #id_agent="ngModel" [(ngModel)]="intervention[0].id_agent" >
+             </div>      
+             <div class="col-sm-12 col-md-12 col-lg-12">
+                <label> id_article </label>
+              <input class="form-control" type="number" name="id_article" #id_article="ngModel" [(ngModel)]="intervention[0].id_article" >
+             </div>
+             <div class="col-sm-12 col-md-12 col-lg-12">
+              <label> email </label>
+              <input class="form-control"  type="string" name="email" #email="ngModel" [(ngModel)]="intervention[0].id_technicien" >
+             </div>
+             <div class="col-sm-12 col-md-12 col-lg-12">
+              <label> id_photo: </label>
+              <input  class="form-control" type="number" name="id_photo" #id_photo="ngModel" [(ngModel)]="intervention[0].id_photo" >
+               </div>  
+               <div class="col-sm-12 col-md-12 col-lg-12">
+                  <label> Date: </label>
+                  <input  class="form-control" type="date" name="date" #date="ngModel" [(ngModel)]="intervention[0].date" >
+                   </div> 
+        </fieldset>
+        <div style="-ms-flex-align: center;">
+          <button   type="submit"  class="btn btn-success" (click)="redirect()" >cancel</button>
+          <button  type="submit"  class="btn btn-success" >Modifier</button>
+        </div>
+    </form>
+    </div>
+    

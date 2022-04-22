@@ -5,6 +5,7 @@ import { InterventionRoutingModule } from './intervention-routing.module';
 import { ListInterventionComponent } from './list-intervention/list-intervention.component';
 import { AddInterventionComponent } from './add-intervention/add-intervention.component';
 import { UpdateInterventionComponent } from './update-intervention/update-intervention.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { UpdateInterventionComponent } from './update-intervention/update-interv
   ],
   imports: [
     CommonModule,
-    InterventionRoutingModule
+    InterventionRoutingModule,
+    FormsModule
   ]
 })
 export class InterventionModule { }
