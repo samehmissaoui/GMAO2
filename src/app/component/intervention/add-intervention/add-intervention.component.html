@@ -26,12 +26,13 @@
     <label> status </label>
     <input class="form-control" type="text" name="status" #status="ngModel" [(ngModel)]="intervention.status" >
    </div>
+   <div class="col-sm-12 col-md-12 col-lg-12">
+    <label> Etat </label>
+  <input class="form-control" type="text" name="etat" #etat="ngModel" [(ngModel)]="intervention.etat" >
+ </div>
       </fieldset>
       <fieldset class=droite>
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <label> Etat </label>
-        <input class="form-control" type="text" name="etat" #etat="ngModel" [(ngModel)]="intervention.etat" >
-       </div>
+        
        <div class="col-sm-12 col-md-12 col-lg-12">
         <label> NRO </label>
         <input class="form-control"  type="text" name="NRO" #NRO="ngModel" [(ngModel)]="intervention.NRO" >
@@ -62,8 +63,8 @@
                    </div> 
         </fieldset>
         <div style="-ms-flex-align: center;">
-          <button   type="submit"  class="btn btn-success" (click)="redirect()" >cancel</button>
-          <button  type="submit"  class="btn btn-success" >ajouter</button>
+          <button   type="submit"  class="btn btn-warning" (click)="redirect()" >cancel</button>
+          <button  type="submit"  class="btn btn-info" >ajouter</button>
         </div>
     </form>
     </div>

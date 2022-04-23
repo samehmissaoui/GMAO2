@@ -23,7 +23,7 @@ export const Feeds: Feed[] = [
         class: 'bg-warning',
         icon: 'bi bi-bag-check',
         task: '3 RDV confirmé.',
-        time: '31 May'
+        time: '31 May' 
     },
     {
         class: 'bg-danger',

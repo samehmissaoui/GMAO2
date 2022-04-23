@@ -14,12 +14,13 @@
         <label> adresse </label>
         <input class="form-control" type="text" name="adresse" #adresse="ngModel" [(ngModel)]="agent[0].adresse" >
        </div>
+       <div class="col-sm-12 col-md-12 col-lg-12">
+        <label> tel </label>
+      <input class="form-control" type="number" name="tel" #tel="ngModel" [(ngModel)]="agent[0].tel" >
+     </div>
       </fieldset>
       <fieldset class=droite>
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <label> tel </label>
-        <input class="form-control" type="number" name="tel" #tel="ngModel" [(ngModel)]="agent[0].tel" >
-       </div>
+       
        <div class="col-sm-12 col-md-12 col-lg-12">
         <label> email </label>
         <input class="form-control"  type="string" name="email" #email="ngModel" [(ngModel)]="agent[0].email" >
@@ -38,8 +39,8 @@
              </div>        
         </fieldset>
         <div style="-ms-flex-align: center;">
-          <button   type="submit"  class="btn btn-success" (click)="redirect()" >cancel</button>
-          <button  type="submit"  class="btn btn-success" >Modifier</button>
+          <button   type="submit"  class="btn btn-warning" (click)="redirect()" >cancel</button>
+          <button  type="submit"  class="btn btn-info" >Modifier</button>
         </div>
     </form>
     </div>
