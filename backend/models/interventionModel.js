@@ -13,6 +13,7 @@ export class Intervention {
     id_article;
     id_agent;
     id_photo;
+    RDV;
     constructor( date,
         jeton,
         operation,
@@ -25,7 +26,7 @@ export class Intervention {
         NRO,
         id_article,
         id_agent,
-        id_photo){
+        id_photo,RDV){
       this.date=date;
       this.jeton=jeton;
       this.operation= operation;
@@ -39,6 +40,7 @@ export class Intervention {
     this.id_article=id_article;
     this.id_agent=id_agent;
     this.id_photo=id_photo;
+    this.RDV=RDV
       
     }
     

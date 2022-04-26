@@ -1,5 +1,5 @@
 const {addIntervention,getIntervention,getInterventionByID,
-  getokIntervention,updateIntervention ,getNokIntervention}=require ("../services/interventionService")
+  getEtatIntervention,updateIntervention ,getRDVIntervention,getTypeIntervention}=require ("../services/interventionService")
 
 get_intervention = async (req, res )=>{
     res.send (await getIntervention())
@@ -19,13 +19,20 @@ update_intervention = async (req ,res)=>{
   res.send (await updateIntervention(intervention))
 
 }
-get_ok_intervention =async (req ,res)=>{
-  console.log('jjjj')
-  res.send (await getokIntervention())
+get_etat_intervention =async (req ,res)=>{
+  let etat= req.params.etat
+  console.log(etat);
+  res.send (await getEtatIntervention(etat))
 }
-get_Nok_intervention =async (req ,res)=>{
-  
-  res.send (await getokIntervention())
+get_rdv_intervention =async (req ,res)=>{
+  let rdv= req.params.rdv
+  console.log(rdv);
+  res.send (await getRDVIntervention())
+}
+get_type_intervention =async (req ,res)=>{
+  let type= req.params.type
+  console.log(type);
+  res.send (await getTypeIntervention())
 }
 
-module.exports ={get_intervention,add_intervention,get_ok_intervention,get_intervention_byid ,update_intervention,get_Nok_intervention}
+module.exports ={get_intervention,add_intervention,get_etat_intervention,get_intervention_byid ,update_intervention,get_rdv_intervention,get_type_intervention}

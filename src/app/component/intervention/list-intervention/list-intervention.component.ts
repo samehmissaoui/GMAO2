@@ -9,7 +9,7 @@ import { InterventionService } from '../intervention.service';
   styleUrls: ['./list-intervention.component.scss']
 })
 export class ListInterventionComponent implements OnInit {
-
+  search!: any;
   intervention !:Intervention[];
   constructor( private _service:InterventionService,private router:Router) { }
   ngOnInit(): void {
@@ -28,10 +28,22 @@ this._service.deleteIntervention(id).subscribe((res)=>{
 redirect(){
   this.router.navigate(['component/intervention/list']);
 }
-etat(){
-  this._service.getNOkIntervention().subscribe((res)=>{
+etat(etat:boolean){
+  this._service.getEtat(etat).subscribe((res)=>{
     this.intervention=res
+    console.log(this.intervention);
   })
 }
-
+RDV(rdv:boolean){
+  this._service.getRdv(rdv).subscribe((res)=>{
+    this.intervention=res
+    console.log(this.intervention); 
+  })
+}
+type(type:string){
+  this._service.getType(type).subscribe((res)=>{
+    this.intervention=res
+    console.log(this.intervention); 
+  })
+}
 }

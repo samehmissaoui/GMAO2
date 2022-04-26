@@ -35,11 +35,14 @@ export class InterventionService {
   deleteIntervention(id:number): Observable<Intervention>{
     return this._http.delete<Intervention>(`${this.baseURL}/intervention/${id}`)
   }
-  getOkIntervention():Observable<Intervention[]>{
-    return this._http.get<Intervention[]>(`${this.baseURL}/intervention/ok`)
-}
-getNOkIntervention():Observable<Intervention[]>{
-  return this._http.get<Intervention[]>(`${this.baseURL}/intervention/Nok`)
-}
+  getEtat(etat: boolean):Observable<Intervention[]>{
+    return this._http.get<Intervention[]>(`${this.baseURL}/intervention/etat/${etat}`)
+  }
+  getRdv(rdv:boolean):Observable<Intervention[]>{
+  return this._http.get<Intervention[]>(`${this.baseURL}/intervention/rdv`)
+  }
+  getType(type:string):Observable<Intervention[]>{
+    return this._http.get<Intervention[]>(`${this.baseURL}/intervention/Type`)
+    }
 }
 

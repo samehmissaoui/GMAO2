@@ -10,7 +10,7 @@ import { InterventionService } from '../intervention.service';
 })
 export class AddInterventionComponent implements OnInit {
 
-  intervention = new Intervention(new Date(),0,'','','',0,'',true,'',0,0,0,'',0)
+  intervention = new Intervention(new Date(),0,'','','',0,true,true,0,0,0,0,'',0,true)
   constructor( private _service:InterventionService,private router:Router) { }
 
   ngOnInit(): void {

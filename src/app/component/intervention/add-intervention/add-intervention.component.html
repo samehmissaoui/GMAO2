@@ -30,6 +30,10 @@
     <label> Etat </label>
   <input class="form-control" type="text" name="etat" #etat="ngModel" [(ngModel)]="intervention.etat" >
  </div>
+ <div class="col-sm-12 col-md-12 col-lg-12">
+  <label> RDV </label>
+<input class="form-control" type="text" name="etat" #RDV="ngModel" [(ngModel)]="intervention.RDV" >
+</div>
       </fieldset>
       <fieldset class=droite>
         
@@ -39,7 +43,7 @@
        </div>
        <div class="col-sm-12 col-md-12 col-lg-12">
         <label> departement: </label>
-        <input  class="form-control" type="text" name="departement" #departement="ngModel" [(ngModel)]="intervention.departement" >
+        <input  class="form-control" type="number" name="departement" #departement="ngModel" [(ngModel)]="intervention.departement" >
          </div>  
          <div class="col-sm-12 col-md-12 col-lg-12">
             <label> Id Agent: </label>

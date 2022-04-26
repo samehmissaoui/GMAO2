@@ -5,7 +5,7 @@ export class Intervention {
     type:string;
     categorie:string;
     id_technicien:number;
-    status:string;
+    status:boolean;
     etat:boolean;
     num_intervention:number; 
     departement;
@@ -13,20 +13,22 @@ export class Intervention {
     id_article:number;
     id_agent:number;
     id_photo:string;
+    RDV:boolean;
     constructor( date:Date,
         jeton:number,
         operation:string,
         type:string,
         categorie:string,
         id_technicien :number,
-        status:string,
+        status:boolean,
         etat:boolean,
-        departement:string,
+        departement:number,
         NRO:number,
         id_article:number,
         id_agent:number,
         id_photo:string,
-        num_intervention:number
+        num_intervention:number,
+        RDV:boolean
         ){
       this.date=date;
       this.jeton=jeton;
@@ -41,7 +43,8 @@ export class Intervention {
     this.id_article=id_article;
     this.id_agent=id_agent;
     this.id_photo=id_photo;
-    this.num_intervention=num_intervention
+    this.num_intervention=num_intervention;
+    this.RDV=RDV;
       
     }
     
