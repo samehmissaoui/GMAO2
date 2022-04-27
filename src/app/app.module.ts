@@ -32,7 +32,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
 import { AuthService } from './auth/auth.service';
-import { SearchPipePipe } from './pipe/search-pipe.pipe';
+import { SearchPipePipe } from './component/intervention/list-intervention/search-pipe.pipe';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,

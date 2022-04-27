@@ -1,4 +1,4 @@
-import { SearchPipePipe } from './search-pipe.pipe';
+import { SearchPipePipe } from '../component/intervention/list-intervention/search-pipe.pipe';
 
 describe('SearchPipePipe', () => {
   it('create an instance', () => {

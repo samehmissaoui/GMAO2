@@ -76,7 +76,8 @@ sans RDV
                 </thead>
                 <tbody>
                   <tbody  > 
-                    <tr *ngFor="let inter of intervention  ">
+                   <!-- =<tr *ngFor="let inter of intervention | search  "> -->
+                    <tr *ngFor="let inter of intervention ">
                       <td>{{inter.num_intervention}}</td>
                       <td>{{inter.jeton}}</td>       
                       <td>{{inter.status}}</td>

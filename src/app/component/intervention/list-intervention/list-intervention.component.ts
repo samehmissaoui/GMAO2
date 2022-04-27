@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Intervention } from '../intervention';
 import { InterventionService } from '../intervention.service';
+import {SearchPipePipe} from './search-pipe.pipe'
 
 @Component({
   selector: 'app-list-intervention',
@@ -9,7 +10,7 @@ import { InterventionService } from '../intervention.service';
   styleUrls: ['./list-intervention.component.scss']
 })
 export class ListInterventionComponent implements OnInit {
-  search!: any;
+  search!: SearchPipePipe;
   intervention !:Intervention[];
   constructor( private _service:InterventionService,private router:Router) { }
   ngOnInit(): void {
