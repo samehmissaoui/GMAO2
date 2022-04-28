@@ -6,7 +6,7 @@ export class Intervention {
     categorie:string;
     id_technicien:number;
     status:boolean;
-    etat:boolean;
+    etat:string;
     num_intervention:number; 
     departement;
     NRO:number;
@@ -21,7 +21,7 @@ export class Intervention {
         categorie:string,
         id_technicien :number,
         status:boolean,
-        etat:boolean,
+        etat:string,
         departement:number,
         NRO:number,
         id_article:number,

@@ -2,10 +2,7 @@
 
     <form  class="form-group form-horizontal" #interventionForm="ngForm" (ngSubmit)="ajoutIntervention()">
         <fieldset class=gauche>
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <label> Numero d'intervention </label>
-        <input class="form-control" type="number" name="num_intervention" #num_intervention="ngModel"  [(ngModel)]="intervention.num_intervention" >
-       </div>
+         
        <div class="col-sm-12 col-md-12 col-lg-12">
         <label> Jeton </label>
         <input class="form-control" type="number" name="jeton" #jeton="ngModel" [(ngModel)]="intervention.jeton" >
@@ -16,7 +13,10 @@
        </div>
        <div class="col-sm-12 col-md-12 col-lg-12">
         <label>Type</label>
-    <input class="form-control" type="text" name="type" #type="ngModel"  [(ngModel)]="intervention.type" >
+        <select class="form-select" aria-label="Default select example" name="type" #type="ngModel"  [(ngModel)]="intervention.type">
+          <option value="Post Production">Post Production</option>
+          <option value="SAV">SAV</option>
+        </select>
    </div>
    <div class="col-sm-12 col-md-12 col-lg-12">
     <label> Categorie </label>
@@ -28,11 +28,19 @@
    </div>
    <div class="col-sm-12 col-md-12 col-lg-12">
     <label> Etat </label>
-  <input class="form-control" type="text" name="etat" #etat="ngModel" [(ngModel)]="intervention.etat" >
+    <select class="form-select" aria-label="Default select example" type="text" name="etat" #etat="ngModel" [(ngModel)]="intervention.etat" >
+      <option value="Ok">Ok</option>
+      <option value="Nok">Nok</option>
+      <option value="En cours">En cours</option>
+    </select>
  </div>
  <div class="col-sm-12 col-md-12 col-lg-12">
   <label> RDV </label>
-<input class="form-control" type="text" name="etat" #RDV="ngModel" [(ngModel)]="intervention.RDV" >
+  <select class="form-select" aria-label="Default select example" name="etat" #RDV="ngModel" [(ngModel)]="intervention.RDV">
+    <option value="1">Avec RDV</option>
+    <option value="0">Sans RDV</option>
+  </select>
+
 </div>
       </fieldset>
       <fieldset class=droite>

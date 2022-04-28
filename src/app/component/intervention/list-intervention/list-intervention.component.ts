@@ -29,7 +29,7 @@ this._service.deleteIntervention(id).subscribe((res)=>{
 redirect(){
   this.router.navigate(['component/intervention/list']);
 }
-etat(etat:boolean){
+etat(etat:string){
   this._service.getEtat(etat).subscribe((res)=>{
     this.intervention=res
     console.log(this.intervention);

@@ -3,6 +3,11 @@
 
     <form  class="form-group form-horizontal" #technicienForm="ngForm" (ngSubmit)="update()" >
         <fieldset class=gauche>
+
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <label> Id Technicien: </label>
+        <input class="form-control" type="number" name="id_technicien" #id_technicien="ngModel" disabled  [(ngModel)]="technicien[0].id_technicien" >
+       </div>
           <div class="col-sm-12 col-md-12 col-lg-12">
             <label> nom: </label>
         <input class="form-control" type="text" name="nom" #nom="ngModel"  [(ngModel)]="technicien[0].nom" >

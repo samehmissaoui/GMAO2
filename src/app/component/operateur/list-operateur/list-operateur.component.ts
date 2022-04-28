@@ -14,16 +14,19 @@ export class ListOperateurComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.getOperateur()   
+    this.getOperateur()
+  
+       
   }
 
   getOperateur(){
     this._service.getAllOperateur().subscribe((res)=>{
                 this.operateur=res
+                console.log(this.operateur);
             })
     }
 
-    deleteAgent(id:number){
+    deleteOperateur(id:number){
       this._service.deleteOperateur(id).subscribe((res)=>{
         this.getOperateur()
       })}

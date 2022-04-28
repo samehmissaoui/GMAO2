@@ -3,6 +3,10 @@
     <form  class="form-group form-horizontal" #agentForm="ngForm" (ngSubmit)="update()">
         <fieldset class=gauche>
           <div class="col-sm-12 col-md-12 col-lg-12">
+            <label> Id Agent: </label>
+        <input class="form-control" type="number" name="id_agent" #id_agent="ngModel" disabled  [(ngModel)]="agent[0].id_agent" >
+       </div>
+          <div class="col-sm-12 col-md-12 col-lg-12">
             <label> nom: </label>
         <input class="form-control" type="text" name="nom" #nom="ngModel"  [(ngModel)]="agent[0].nom" >
        </div>

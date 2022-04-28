@@ -68,7 +68,7 @@ const getEtatIntervention=(etat)=>{
     })
 }
 const getRDVIntervention=(rdv)=>{ 
-    let qr=`select * from intervention where RDV ='${rdv}'`
+    let qr=`select * from intervention where RDV =${rdv}`
     return new Promise((resolve,reject)=>{
         db.query(qr,(err,result)=>{
     (err)?
@@ -77,13 +77,9 @@ const getRDVIntervention=(rdv)=>{
     })
     })
 }
-
 const getTypeIntervention=(type)=>{ 
-    let qr
-   if  (type ='sav' )
-   {  qr=`select * from intervention where RDV ='sav'` }
-   elseif  (type = 'Post Production')
-   {  qr=`select * from intervention where RDV ='Post Production'` }
+   
+   let qr=`select * from intervention where type ='${type}'`
     return new Promise((resolve,reject)=>{
         db.query(qr,(err,result)=>{
     (err)?
@@ -92,9 +88,14 @@ const getTypeIntervention=(type)=>{
     })
     })
 }
-
-
-
-
-
-module.exports={addIntervention,getIntervention ,getEtatIntervention,getInterventionByID ,updateIntervention ,getRDVIntervention,getTypeIntervention}
+const deleteIntervention = (num) => {
+    console.log(num);
+    let qr = `DELETE FROM intervention WHERE  num_intervention='${num}'`;
+  return new Promise((resolve, reject) => {
+    db.query(qr, (err, result) => {
+      err ? reject(err) : resolve(result);
+    });
+  });
+  };
+module.exports={addIntervention,getIntervention ,getEtatIntervention,getInterventionByID ,
+    updateIntervention ,getRDVIntervention,getTypeIntervention ,deleteIntervention}

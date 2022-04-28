@@ -4,7 +4,7 @@
         <fieldset class=gauche>
           <div class="col-sm-12 col-md-12 col-lg-12">
             <label> Numero d'intervention </label>
-        <input class="form-control" type="number" name="num_intervention" #num_intervention="ngModel"  [(ngModel)]="intervention[0].num_intervention" >
+        <input class="form-control" type="number" name="num_intervention" disabled #num_intervention="ngModel"  [(ngModel)]="intervention[0].num_intervention" >
        </div>
        <div class="col-sm-12 col-md-12 col-lg-12">
         <label> Jeton </label>
@@ -16,8 +16,10 @@
        </div>
        <div class="col-sm-12 col-md-12 col-lg-12">
         <label>Type</label>
-    <input class="form-control" type="text" name="type" #type="ngModel"  [(ngModel)]="intervention[0].type" >
-   </div>
+        <select class="form-select" aria-label="Default select example" name="type" #type="ngModel"  [(ngModel)]="intervention[0].type">
+          <option value="Post Production">Post Production</option>
+          <option value="SAV">SAV</option>
+        </select>   </div>
    <div class="col-sm-12 col-md-12 col-lg-12">
     <label> Categorie </label>
     <input class="form-control" type="text" name="categorie" #categorie="ngModel" [(ngModel)]="intervention[0].categorie" >
@@ -28,12 +30,17 @@
    </div>
    <div class="col-sm-12 col-md-12 col-lg-12">
     <label> Etat </label>
-  <input class="form-control" type="boolean" name="etat" #etat="ngModel" [(ngModel)]="intervention[0].etat" >
- </div>
+    <select class="form-select" aria-label="Default select example" type="text" name="etat" #etat="ngModel" [(ngModel)]="intervention[0].etat" >
+      <option value="Ok">Ok</option>
+      <option value="Nok">Nok</option>
+      <option value="En cours">En cours</option>
+    </select> </div>
  <div class="col-sm-12 col-md-12 col-lg-12">
   <label> RDV </label>
-<input class="form-control" type="text" name="etat" #RDV="ngModel" [(ngModel)]="intervention[0].RDV" >
- </div>
+  <select class="form-select" aria-label="Default select example" name="etat" #RDV="ngModel" [(ngModel)]="intervention[0].RDV">
+    <option value="1">Avec RDV</option>
+    <option value="0">Sans RDV</option>
+  </select> </div>
       </fieldset>
       <fieldset class=droite>
       
