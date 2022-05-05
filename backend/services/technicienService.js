@@ -48,9 +48,9 @@ return new Promise((resolve, reject) => {
   });
 });
 };
-
-const countTechnicienByAgent =(gId) => {
+const countTechnicien =(gId) => {
   let qr = `SELECT COUNT (*) FROM technicien where id_agent='${gId}'`
+ // console.log('countTechnicien');
   return new Promise((resolve, reject) => {
     db.query(qr, (err, result) => {
       err ? reject(err) : resolve(result);
@@ -58,4 +58,4 @@ const countTechnicienByAgent =(gId) => {
   });
 }
 
-module.exports = { addTechnicien, getTechnicien, updateTechnicien, getTechnicienByid, deleteTechnicien , countTechnicienByAgent};
+module.exports = { addTechnicien, getTechnicien, updateTechnicien, getTechnicienByid, deleteTechnicien , countTechnicien};

@@ -13,6 +13,8 @@ export class ListTechnicienComponent implements OnInit {
 
   ngOnInit(): void {
     this.getTechnicein()
+
+    
   }
 
   getTechnicein(){

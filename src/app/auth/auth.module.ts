@@ -4,10 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AuthRoutingModule } from './auth-routing.module';
 import { AuthComponent } from './auth.component';
 import { SignInComponent } from './sign-in/sign-in.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { VerifyEmailComponent } from './verify-email/verify-email.component';
-
 
 // import { AngularFireModule } from '@angular/fire/compat';
 // import { AngularFireAuthModule } from '@angular/fire/compat/auth';
@@ -22,9 +19,7 @@ import { VerifyEmailComponent } from './verify-email/verify-email.component';
   declarations: [
     AuthComponent,
     SignInComponent,
-    SignUpComponent,
-    ForgotPasswordComponent,
-    VerifyEmailComponent
+    ForgotPasswordComponent
   ],
   imports: [
     CommonModule,
