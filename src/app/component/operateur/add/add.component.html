@@ -5,11 +5,17 @@
         
        <div class="col-sm-12 col-md-12 col-lg-12">
         <label> Nom Operateur </label>
-        <input class="form-control" type="text" name="nom_operateur" #nom_operateur="ngModel" [(ngModel)]="operateur.nom_operateur" >
+        <input class="form-control" type="text" name="nom_operateur" #nom_operateur="ngModel" 
+        [(ngModel)]="operateur.nom_operateur"
+        [class.is-invalid]="nom_operateur.invalid && nom_operateur.touched" required
+        >
        </div>
        <div class="col-sm-12 col-md-12 col-lg-12">
         <label> Id Agnet </label>
-        <input class="form-control" type="text" name="id_agnet" #id_agnet="ngModel" [(ngModel)]="operateur.id_agnet" >
+        <input class="form-control" type="text" name="id_agnet" #id_agnet="ngModel" 
+        [(ngModel)]="operateur.id_agnet" 
+        [class.is-invalid]="id_agnet.invalid && id_agnet.touched" required
+        >
        </div>
       </fieldset>
         <div style="-ms-flex-align: center;">

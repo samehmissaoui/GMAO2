@@ -1,5 +1,5 @@
 const { addOperateur, getOperateur, updateOperateur,
-    getOperateurByid, deleteOperateur} = require('../services/operateurService');
+    getOperateurByid, deleteOperateur ,countOperateur} = require('../services/operateurService');
 
 get_operateur =async (req,res)=>{
    res.send(await getOperateur())
@@ -21,6 +21,10 @@ delete_operateur =async (req,res)=>{
        let gId=req.params.id
        res.send(await deleteOperateur(gId))
    }
+ count_operateur = async (req,res)=>{
+    console.log('cc');
+   res.send(await countOperateur())
+}
 
 module.exports={get_operateur,get_operateur_byid,add_operateur,
-   update_operateur,delete_operateur}
+   update_operateur,delete_operateur,count_operateur}
