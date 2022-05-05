@@ -1,9 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {
-  CommonModule, LocationStrategy,
-  PathLocationStrategy
-} from '@angular/common';
+import { CommonModule, LocationStrategy, PathLocationStrategy} from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
@@ -33,6 +30,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
 import { AuthService } from './auth/auth.service';
 import { SearchPipePipe } from './component/intervention/list-intervention/search-pipe.pipe';
+import { AuthGuard } from './auth/guard/auth.guard';
+//import { SecureInnerPagesGuard } from './shared/secure-inner-pages.guard';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -77,7 +76,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
       provide: PERFECT_SCROLLBAR_CONFIG,
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
     },
-    AuthService
+    AuthService,AuthGuard ,
+    //SecureInnerPagesGuard
     
   ],
   bootstrap: [AppComponent]
