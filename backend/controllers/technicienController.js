@@ -1,4 +1,4 @@
-const { addTechnicien, getTechnicien, updateTechnicien, getTechnicienByid, deleteTechnicien ,countTechnicienByAgent}
+const { addTechnicien, getTechnicien, updateTechnicien, getTechnicienByid, deleteTechnicien ,countTechnicien}
  = require('../services/technicienService');
 
 get_technicien =async (req,res)=>{
@@ -23,9 +23,10 @@ update_technicien =async (req,res )=>{
         res.send(await deleteTechnicien(gId))
     }
 
- count_technicien_byagnet =async (req,res)=>{
-        let gId=req.params.id
-        res.send(await countTechnicienByAgent(gId))
+ count_technicien =async (req,res)=>{
+let gId=req.params.id
+    //   console.log('countTechnicien');
+        res.send(await countTechnicien(gId))
 }
 
-module.exports={get_technicien,get_technicien_byid,add_technicien,update_technicien,delete_technicien ,count_technicien_byagnet}
+module.exports={get_technicien,get_technicien_byid,add_technicien,update_technicien,delete_technicien ,count_technicien}
