@@ -1,6 +1,7 @@
 const {addIntervention,getIntervention,getInterventionByID,
   getEtatIntervention,updateIntervention ,getRDVIntervention,
-  getTypeIntervention ,deleteIntervention}=require ("../services/interventionService")
+  getTypeIntervention ,deleteIntervention,
+  countIntervention}=require ("../services/interventionService")
 
 get_intervention = async (req, res )=>{
     res.send (await getIntervention())
@@ -35,6 +36,10 @@ get_type_intervention =async (req ,res)=>{
   let type= req.params.type
   res.send (await getTypeIntervention(type))
 }
+count_intervention =async (req ,res)=>{
+  res.send (await countIntervention())
+}
 
 module.exports ={get_intervention,add_intervention,get_etat_intervention,get_intervention_byid
-   ,update_intervention,get_rdv_intervention,get_type_intervention,delete_intervention}
+   ,update_intervention,get_rdv_intervention,get_type_intervention,delete_intervention,
+   count_intervention}

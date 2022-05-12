@@ -36,13 +36,19 @@ const updateOperateur = (operateur) => {
   };
 const deleteOperateur = (gId) => {
   let qr = `DELETE FROM operateur WHERE id='${gId}'`;
-
 return new Promise((resolve, reject) => {
   db.query(qr, (err, result) => {
     err ? reject(err) : resolve(result);
   });
 });
 };
-
+const countOperateur =() =>{
+ let qr =`count * from operateur`
+ return new Promise((resolve, reject) => {
+  db.query(qr, (err, result) => {
+    err ? reject(err) : resolve(result);
+  });
+});
+}
 module.exports = { addOperateur, getOperateur, updateOperateur,
-     getOperateurByid, deleteOperateur };
+     getOperateurByid, deleteOperateur,countOperateur };

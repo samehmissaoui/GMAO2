@@ -97,5 +97,15 @@ const deleteIntervention = (num) => {
     });
   });
   };
+  const countIntervention =() =>{
+    let qr =`count * from intervention`
+    return new Promise((resolve, reject) => {
+     db.query(qr, (err, result) => {
+       err ? reject(err) : resolve(result);
+     });
+   });
+   }
+
 module.exports={addIntervention,getIntervention ,getEtatIntervention,getInterventionByID ,
-    updateIntervention ,getRDVIntervention,getTypeIntervention ,deleteIntervention}
+    updateIntervention ,getRDVIntervention,getTypeIntervention ,deleteIntervention,
+    countIntervention}
