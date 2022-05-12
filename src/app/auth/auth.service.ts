@@ -7,6 +7,17 @@ import {
   AngularFirestoreDocument,
 } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Agent } from 'http';
+
+const httpoptions = { headers :new HttpHeaders
+  (
+    {
+      'Content-Type' : 'application/json'
+    }
+  )
+  } 
 
 @Injectable({
   providedIn: 'root'
@@ -14,28 +25,31 @@ import { Router } from '@angular/router';
 export class AuthService {
 
     userData: any; // Save logged in user data
+  
     constructor(
       public afs: AngularFirestore, // Inject Firestore service
       public afAuth: AngularFireAuth, // Inject Firebase auth service
       public router: Router,
       public ngZone: NgZone // NgZone service to remove outside scope warning
-    ) {
+    ) 
+    
+    
+    {
       /* Saving user data in localstorage when 
       logged in and setting up null when logged out */
    
     this.afAuth.authState.subscribe((user) => {
       if (user) {
-        console.log(user);
-        
+        console.log(user);   
         this.userData = user;
         localStorage.setItem('user', JSON.stringify(this.userData));
         JSON.parse(localStorage.getItem('user')!);
-      } else {
+       }
+      else {
         localStorage.setItem('user', 'null');
         JSON.parse(localStorage.getItem('user')!);
-        //console.log(this.userData);
-        
-      }
+        console.log(this.userData);     
+     }
     });
   }
     // Sign in with email/password
@@ -61,6 +75,8 @@ export class AuthService {
           up and returns promise */
           this.SendVerificationMail();
           this.SetUserData(result.user);
+      
+         
         })
         .catch((error) => {
           window.alert(error.message);
@@ -87,7 +103,7 @@ export class AuthService {
     }
     // Returns true when user is looged in and email is verified
     get isLoggedIn(): boolean {
-      const user = JSON.parse(localStorage.getItem('user')!);
+      const user = JSON.parse(localStorage.gettemI('user')!);
       return user !== null && user.emailVerified !== false ? true : false;
     }
     // Sign in with Google
@@ -125,7 +141,7 @@ export class AuthService {
         displayName: user.displayName,
         photoURL: user.photoURL,
         emailVerified: user.emailVerified,
-       role: user.role,
+        role: user.role,
       };
       return userRef.set(userData, {
         merge: true,
@@ -138,5 +154,8 @@ export class AuthService {
         this.router.navigate(['sign-in']);
       });
     }
+
+
+
     
   }

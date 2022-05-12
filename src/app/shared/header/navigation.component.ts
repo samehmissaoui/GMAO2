@@ -18,6 +18,9 @@ export class NavigationComponent implements AfterViewInit {
   constructor(private modalService: NgbModal) {
   }
 
+  // SignOut(){
+  //   this._service.SignOut()
+  // }
   // This is for Notifications
   notifications: Object[] = [
     {

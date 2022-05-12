@@ -57,8 +57,12 @@
 												<input type="text" name="logrole" class="form-style" placeholder="Role" id="logrole" #userRole autocomplete="off">
 												<i class="input-icon uil uil-user"></i>
 											</div>	
-											<a href="#" class="btn mt-4" (click)="authService.SignUp(userEmail.value, userPwd.value )" >submit</a>
+											<a class="btn mt-4" (click)="authService.SignUp(userEmail.value, userPwd.value )" >submit</a>
+											<!-- <a class="btn mt-4" (click)="authService.AuthLogin(userEmail.value )" >submit</a> -->
+
 				      					</div>
+										  <a href="#" class="btn mt-4" (click)="authService.SignOut()" >submit</a>
+
 			      					</div>
 			      				</div>
 			      			</div>
