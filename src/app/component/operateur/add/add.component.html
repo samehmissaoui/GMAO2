@@ -12,10 +12,14 @@
        </div>
        <div class="col-sm-12 col-md-12 col-lg-12">
         <label> Id Agnet </label>
-        <input class="form-control" type="text" name="id_agnet" #id_agnet="ngModel" 
+        <!-- <input class="form-control" type="text" name="id_agnet" #id_agnet="ngModel" 
         [(ngModel)]="operateur.id_agnet" 
-        [class.is-invalid]="id_agnet.invalid && id_agnet.touched" required
-        >
+        [class.is-invalid]="id_agnet.invalid && id_agnet.touched" required > -->
+        <select class=" form-control dropdown-toggle" type="text" name="id_agnet" #id_agnet="ngModel" 
+        [(ngModel)]="operateur.id_agent" (change)="Change($event, operateur)">
+        <option selected > --select un agent--</option>
+        <option *ngFor="let a of agent" [ngValue]="a.id_agent" >{{a.id_agent}}</option>
+      </select>
        </div>
       </fieldset>
         <div style="-ms-flex-align: center;">

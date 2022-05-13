@@ -10,14 +10,14 @@ export const ROUTES: RouteInfo[] = [
     extralink: false,
     submenu: []
   },
-  {
-    path: '/component/alert',
-    title: 'Alert',
-    icon: 'bi bi-bell',
-    class: '',
-    extralink: false,
-    submenu: []
-  },
+  // {
+  //   path: '/component/alert',
+  //   title: 'Alert',
+  //   icon: 'bi bi-bell',
+  //   class: '',
+  //   extralink: false,
+  //   submenu: []
+  // },
   {
     path: '/component/operateur/list',
     title: 'Operateur',
@@ -57,14 +57,14 @@ export const ROUTES: RouteInfo[] = [
     class: '',
     extralink: false,
     submenu: []
-  },
- 
-  {
-    path: '/about',
-    title: 'About',
-    icon: 'bi bi-people',
-    class: '',
-    extralink: false,
-    submenu: []
   }
+  // ,
+  // {
+  //   path: '/about',
+  //   title: 'About',
+  //   icon: 'bi bi-people',
+  //   class: '',
+  //   extralink: false,
+  //   submenu: []
+  // }
 ];

@@ -16,7 +16,7 @@ export class UpdateOperateurComponent implements OnInit {
   constructor(private _service:OperateurService ,private router:Router ,private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-   this.operateur=[{ id:0, nom_operateur:'', id_agnet:0}]
+   this.operateur=[{ id:0, nom_operateur:'', id_agent:0}]
     this.id=Number(this.activatedRoute.snapshot.paramMap.get('id'))
     this.getOperateurByid()
 

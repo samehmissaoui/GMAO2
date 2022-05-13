@@ -1,5 +1,7 @@
 import { Component, AfterViewInit, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+//  import { AuthService } from 'app/auth/auth.service';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 declare var $: any;
@@ -14,12 +16,12 @@ export class NavigationComponent implements AfterViewInit {
   public config: PerfectScrollbarConfigInterface = {};
 
   public showSearch = false;
+  nom=localStorage.getItem("nom")
 
-  constructor(private modalService: NgbModal) {
-  }
-
+  //  constructor(private modalService: NgbModal ,public serviceAuth : AuthService) {}
+ constructor(private modalService: NgbModal ,public router: Router ) {}
   // SignOut(){
-  //   this._service.SignOut()
+  //   this.serviceAuth.SignOut()
   // }
   // This is for Notifications
   notifications: Object[] = [
@@ -114,5 +116,11 @@ export class NavigationComponent implements AfterViewInit {
     icon: 'de'
   }]
 
+  SignOut() {
+ 
+      localStorage.removeItem('user');
+      this.router.navigate(['sign-in']);
+    };
+  
   ngAfterViewInit() { }
 }

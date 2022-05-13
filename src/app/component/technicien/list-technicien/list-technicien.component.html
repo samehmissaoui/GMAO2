@@ -26,6 +26,7 @@
                   <td>{{tech.adresse}}</td>
                   <td>{{tech.tel}}</td>
                   <td>{{tech.email}}</td>
+                  <td>{{tech.password}}</td>
                   <td><a class="btn btn-info"[routerLink]="['/component/technicien/update',tech.id_technicien]">Modifier</a></td>    
                   <td><a class="btn btn-danger" (click)="deleteTech(tech.id_technicien)">Supprimer</a></td>
                 </tr>

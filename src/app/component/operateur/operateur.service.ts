@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Operateur } from './operateur';
+import { Agent } from '../agent/agent';
 
 const httpoptions = { headers :new HttpHeaders
   (
@@ -34,5 +35,8 @@ export class OperateurService {
   }
   deleteOperateur(id:number): Observable<Operateur>{
   return this._http.delete<Operateur>(`${this.baseURL}/operateur/${id}`)
+}
+getAllAgent(): Observable<Agent[]>{
+  return this._http.get<Agent[]>(`${this.baseURL}/agent`)
 }
 }
