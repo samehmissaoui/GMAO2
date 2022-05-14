@@ -15,10 +15,10 @@
         <!-- <input class="form-control" type="text" name="id_agnet" #id_agnet="ngModel" 
         [(ngModel)]="operateur.id_agnet" 
         [class.is-invalid]="id_agnet.invalid && id_agnet.touched" required > -->
-        <select class=" form-control dropdown-toggle" type="text" name="id_agnet" #id_agnet="ngModel" 
-        [(ngModel)]="operateur.id_agent" (change)="Change($event, operateur)">
+        <select class=" form-control dropdown-toggle"  >
+        <!-- type="text" name="id_agnet" #id_agnet="ngModel" [(ngModel)]="operateur.id_agent"  (change)="Change($event, operateur)"> -->
         <option selected > --select un agent--</option>
-        <option *ngFor="let a of agent" [ngValue]="a.id_agent" >{{a.id_agent}}</option>
+        <option *ngFor="let a of agent" [ngValue]="a.id_agent" >{{a.nom}}</option>
       </select>
        </div>
       </fieldset>
@@ -29,3 +29,4 @@
     </form>
     </div>
     
+

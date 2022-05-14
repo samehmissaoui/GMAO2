@@ -34,9 +34,10 @@ agent!:Agent[]
         this.agent=res
         
     })}
-    Change(event:any, op: Operateur){
-      op.id_agent= event.target.value;
+    // Change(event:any, op: Operateur){
+    //   op.id_agent= event.target.value;
     
-      }
+    //   }
   }
+
   
