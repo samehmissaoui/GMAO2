@@ -35,4 +35,7 @@ getTechnicienByid(id:number): Observable<Technicien[]>{
 deleteTechnicien(id:number): Observable<Technicien>{
   return this._http.delete<Technicien>(`${this.baseURL}/technicien/${id}`)
 }
+countTechnicien(): Observable<number>{
+  return this._http.get<number>(`${this.baseURL}/technicien/count`)
+}
 }

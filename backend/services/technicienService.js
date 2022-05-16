@@ -48,8 +48,10 @@ return new Promise((resolve, reject) => {
   });
 });
 };
-const countTechnicien =(gId) => {
-  let qr = `SELECT COUNT (*) FROM technicien where id_agent='${gId}'`
+// const countTechnicien =(gId) => {
+//   let qr = `SELECT COUNT (*) FROM technicien where id_agent='${gId}'`
+const countTechnicien =() => {
+  let qr = `SELECT COUNT (*) FROM technicien `
  // console.log('countTechnicien');
   return new Promise((resolve, reject) => {
     db.query(qr, (err, result) => {

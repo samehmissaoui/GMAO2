@@ -28,9 +28,12 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
-import { AuthService } from './auth/auth.service';
+
 import { SearchPipePipe } from './component/intervention/list-intervention/search-pipe.pipe';
-import { AuthGuard } from './auth/guard/auth.guard';
+import { AuthService } from './auth/auth.service';
+
+
+//import { AuthGuard } from './auth/guard/auth.guard';
 //import { SecureInnerPagesGuard } from './shared/secure-inner-pages.guard';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -76,7 +79,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
       provide: PERFECT_SCROLLBAR_CONFIG,
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
     },
-    AuthService,AuthGuard ,
+    AuthService,
+    //AuthGuard ,
     //SecureInnerPagesGuard
     
   ],

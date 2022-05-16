@@ -20,9 +20,7 @@ export class NavigationComponent implements AfterViewInit {
 
   //  constructor(private modalService: NgbModal ,public serviceAuth : AuthService) {}
  constructor(private modalService: NgbModal ,public router: Router ) {}
-  // SignOut(){
-  //   this.serviceAuth.SignOut()
-  // }
+ 
   // This is for Notifications
   notifications: Object[] = [
     {
@@ -117,9 +115,10 @@ export class NavigationComponent implements AfterViewInit {
   }]
 
   SignOut() {
- 
-      localStorage.removeItem('user');
-      this.router.navigate(['sign-in']);
+    //localStorage.setItem('nom', 'null');
+    //  localStorage.removeItem('user');
+      localStorage.removeItem('nom');
+      this.router.navigate(['auth']);
     };
   
   ngAfterViewInit() { }

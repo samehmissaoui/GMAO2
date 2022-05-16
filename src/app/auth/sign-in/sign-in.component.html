@@ -22,7 +22,7 @@
 												<input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" #userPassword autocomplete="off">
 												<i class="input-icon uil uil-lock-alt"></i>
 											</div>
-											<a href="#" class="btn mt-4"   (click)="authService.SignIn(userName.value, userPassword.value)">submit</a>
+											<a class="btn mt-4"   (click)="authService.SignIn(userName.value, userPassword.value)">submit</a>
                             				<p class="mb-0 mt-4 text-center"><a routerLink="/auth/forgotpassword" class="link">Forgot your password?</a></p>
 				      					</div>
 			      					</div>
@@ -52,10 +52,10 @@
 											<a class="btn mt-4" (click)="authService.SignUp(userEmail.value, userPwd.value )" >submit</a>
 											<!-- <a class="btn mt-4" (click)="authService.AuthLogin(userEmail.value )" >submit</a> -->
 
-				      					 <!-- </div>
-										  <a href="#" class="btn mt-4" (click)="authService.SignOut()" >log out</a>
+				      					 </div>
+										  <a  class="btn mt-4" (click)="authService.SignOut()" >log out</a>
 
-			      					</div>  -->
+			      					</div> 
 			      				</div>
 			      			</div>
 			      		</div>

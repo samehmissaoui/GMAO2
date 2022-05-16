@@ -26,7 +26,7 @@ update_technicien =async (req,res )=>{
  count_technicien =async (req,res)=>{
 let gId=req.params.id
     //   console.log('countTechnicien');
-        res.send(await countTechnicien(gId))
+        res.send(await countTechnicien())
 }
 
 module.exports={get_technicien,get_technicien_byid,add_technicien,update_technicien,delete_technicien ,count_technicien}

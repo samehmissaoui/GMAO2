@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { ListAgentComponent } from './list-agent/list-agent.component';
 
 
+
 @NgModule({
   declarations: [
     AgentComponent,
@@ -20,6 +21,8 @@ import { ListAgentComponent } from './list-agent/list-agent.component';
     CommonModule,
     AgentRoutingModule,
     FormsModule
-  ]
+  ],  
 })
 export class AgentModule { }
+
+
