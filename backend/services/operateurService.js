@@ -17,7 +17,7 @@ const getOperateurByid = (gId) => {
   });
 };
 const addOperateur = (operateur) => {
-  let qr = `INSERT INTO operateur( nom_operateur, id_agent) VALUES ('${operateur.nom_operateur}',${operateur.id_agnet})`;
+  let qr = `INSERT INTO operateur( nom_operateur, id_agent) VALUES ('${operateur.nom_operateur}',${operateur.id_agent})`;
      return new Promise((resolve, reject) => {
       db.query(qr, (err, result) => {
         err ? reject(err) : resolve(result);

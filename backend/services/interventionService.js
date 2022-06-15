@@ -18,7 +18,7 @@ const getInterventionByID = (num) => {
   });
 };
 const addIntervention = (intervention) => {
-  let qr = `INSERT INTO intervention( jeton,
+  let qr = `INSERT INTO intervention(jeton,
      operation, type, categorie,id_technicien,status,
       etat, date,departement,NRO,id_agent,id_article,id_photo,RDV)
      VALUES ('${intervention.jeton}','${intervention.operation}',
